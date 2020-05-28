@@ -39,11 +39,17 @@ class QuizzBrain {
     return _questionBank[_questionNumber].questionAnswer;
   }
 
+  bool isFinished() {
+    return _questionNumber == _questionBank.length - 1;
+  }
+
+  void resetQuestionNumber() {
+    _questionNumber = 0;
+  }
+
   void nextQuestion() {
     if (_questionNumber < _questionBank.length - 1) {
       _questionNumber++;
-    } else {
-      _questionNumber = 0;
     }
   }
 }
