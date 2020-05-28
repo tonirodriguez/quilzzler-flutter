@@ -50,6 +50,7 @@ class _QuizPageState extends State<QuizPage> {
           color: Colors.red,
         ));
       }
+      quizzBrain.nextQuestion();
       if (quizzBrain.isFinished()) {
         Alert(
           context: context,
@@ -62,7 +63,6 @@ class _QuizPageState extends State<QuizPage> {
         correctAnswers = 0;
         errorAnswers = 0;
       }
-      quizzBrain.nextQuestion();
     });
   }
 

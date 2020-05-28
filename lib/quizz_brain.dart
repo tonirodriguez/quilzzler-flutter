@@ -40,7 +40,7 @@ class QuizzBrain {
   }
 
   bool isFinished() {
-    return _questionNumber == _questionBank.length - 1;
+    return _questionNumber == _questionBank.length;
   }
 
   void resetQuestionNumber() {
@@ -48,8 +48,6 @@ class QuizzBrain {
   }
 
   void nextQuestion() {
-    if (_questionNumber < _questionBank.length - 1) {
-      _questionNumber++;
-    }
+    _questionNumber++;
   }
 }
